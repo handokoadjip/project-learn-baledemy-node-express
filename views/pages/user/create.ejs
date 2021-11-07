@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <%- include("../../components/header") %>
+  <h1>Add User</h1>
+  <form action="/users" method="post">
+    <div class="input-group">
+      <label for="name">name</label>
+      <input type="text" name="name" id="name">
+    </div>
+
+    <div class="input-group">
+      <label for="nim">nim</label>
+      <input type="text" name="nim" id="nim">
+    </div>
+
+    <div class="input-group">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+
+  <%- include("../../components/footer") %>
+</body>
+</html>

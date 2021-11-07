@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <%- include("../../components/header") %>
+  <a href="/users/create">Register</a>
+  <h1>Users</h1>
+  <form action="/users" method="get">
+    <input type="text" name="search" id="search">
+    <button type="submit">seacrh</button>
+  </form>
+  <% if(users.length > 0) { %>
+    <ul>
+    <% users.map((user)=> { %>
+      <li><a href="users/<%= user.id %>"><%= user.name %></a></li>
+    <% }); %> 
+    </ul>
+  <% } else { %>
+    <p>Data empty</p>
+  <% } %>
+
+  <%- include("../../components/footer") %>
+</body>
+</html>

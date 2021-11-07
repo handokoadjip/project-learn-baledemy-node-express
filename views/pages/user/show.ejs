@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <%- include("../../components/header") %>
+  <a href="/users">Kembali</a>
+  <h1>Users</h1>
+  <% if(typeof user != "undefined") { %>
+    <ul>
+      <li><%= user.name %></li>
+      <li><%= user.nim %></li>
+    </ul>
+  <% } else { %>
+    <p>404</p>
+  <% } %>
+
+  <%- include("../../components/footer") %>
+</body>
+</html>
